@@ -1,1 +1,5 @@
-/vendor/
+curl.php
+test.http
+url
+response.json
+index.php
