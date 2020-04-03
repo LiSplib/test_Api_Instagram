@@ -1,0 +1,13 @@
+https://api.instagram.com/oauth/authorize
+  ?client_id=576332959951380
+  &redirect_uri=https://lisplib.github.io/test_Api_Instagram/
+  &scope=user_profile,user_media
+  &response_type=code
+
+
+  curl -X POST \ https://api.instagram.com/oauth/access_token \ -F client_id=576332959951380 \ -F client_secret=1b6a14fd80801673716f30339904fe68 \ -F grant_type=authorization_code \ -F redirect_uri=httpcurls://lisplib.github.io/test_Api_Instagram/ \ -F code=AQCjOZu3Z5HGQYP1kKNyEv_uMRtQFlrMKFc2AY1UrYsXxVufmH5ppMe4qMTLEpadLk9VqWLcy8YSNJQzbEbzp0Pg_MXQejKGf-vq6BUrcyOmkq7x-qtw7ffH_0O_Y3UMm-4oC3nA9wkg0VCKDKf_ShBAMMKLhA720dXEqN-SYHIwUnCbtL910H3rpfzRVXOsmdR_2nauyV4IBUkB1ATl6f6gzu5oNYh8K1rzN4WnXQQ9oQ
+
+
+  -X GET \ 'https://graph.instagram.com/17841423254060774?fields=id,username&access_token=IGQVJVeGRjeXRyNWN4OU5lUG9sR1I0ZAjFPd1N2VG9GZAGNvUVdVMDl3VlNZAR3NIcW8xLWgwcGY4VjluSWNJM2ZAwS3ZAZAV2FFSHFaRW9BdWlEenZAIcWJqSVliZAVZACMzJOcnNlTUc5UXN1dHpjQl8yN3Q0SVRyTEp2ekdxTUU0'
+
+
