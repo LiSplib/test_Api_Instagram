@@ -17,9 +17,10 @@ function readData(data){
     let html = "";
     data.data.forEach(element => {
         return html +=`
-        <p>Post n° ${element.id} </p>
-        <img style="width: 250px; height: 250px;" src="${element.media_url}">
-        <p>Légende : ${element.caption ? element.caption : ''} </p>
+        <div class="post">
+            <img src="${element.media_url}">
+            <p>${element.caption ? element.caption : ''} </p>
+        </div>
         `;
     });
     $postList.innerHTML = html;

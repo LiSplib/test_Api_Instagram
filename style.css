@@ -1,0 +1,33 @@
+#postsList{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 2%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.post{
+    background-color: #514a4a;
+    color: white;
+    margin: 2%;
+    box-shadow: 2px 3px 5px grey;
+    border-radius: 5%;
+    padding-left: .5%;
+    padding-right: 0.5%;
+    transition: all .3s ease-in-out;
+}
+
+.post:hover{
+    transform: scale(1.1);
+}
+
+.post img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+    margin-top: 2%;
+}
+
+.post p{
+    text-align: center;
+}
