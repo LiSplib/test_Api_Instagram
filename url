@@ -11,3 +11,7 @@ https://api.instagram.com/oauth/authorize
   -X GET \ 'https://graph.instagram.com/17841423254060774?fields=id,username&access_token=IGQVJVeGRjeXRyNWN4OU5lUG9sR1I0ZAjFPd1N2VG9GZAGNvUVdVMDl3VlNZAR3NIcW8xLWgwcGY4VjluSWNJM2ZAwS3ZAZAV2FFSHFaRW9BdWlEenZAIcWJqSVliZAVZACMzJOcnNlTUc5UXN1dHpjQl8yN3Q0SVRyTEp2ekdxTUU0'
 
 
+GET "https://graph.instagram.com/access_token
+  ?grant_type=ig_exchange_token
+  &client_secret=1b6a14fd80801673716f30339904fe68
+  &access_token=IGQVJVdkZAYZA1FneHpwMDF3aG9mOXRKbC1UTTNYMndHaUFwVE1VcVAtREZAWTnhxMzdkSnA0bVplZA0l1M080MDNOdjMxTFlFZA1NhWElkZAk1ZAc3djMGx0aUh3Y1N1WTduckEyZAXhxdVA1akxrM0cwR3ROLXBRRjdKYTM3MDkw"
