@@ -18,7 +18,7 @@ function readData(data){
     data.data.forEach(element => {
         return html +=`
         <p>Post n° ${element.id} </p>
-        <img src="${element.media_url}">
+        <img style="width: 250px; height: 250px;" src="${element.media_url}">
         `;
     });
     $postList.innerHTML = html;
