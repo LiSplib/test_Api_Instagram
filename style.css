@@ -28,6 +28,16 @@
     margin-top: 2%;
 }
 
+.post:hover img{
+    border-radius: inherit;
+}
+
 .post p{
     text-align: center;
+}
+
+@media all and (max-width: 768px){
+    .post{
+        margin: 5%;
+    }
 }
