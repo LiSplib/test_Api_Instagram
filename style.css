@@ -4,10 +4,9 @@ body{
 
 #postsList{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 2%;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 .post{
@@ -18,6 +17,8 @@ body{
     padding-left: .5%;
     padding-right: .5%;
     transition: all .3s ease-in-out;
+    word-wrap: break-word;
+    max-width: calc(250px + 1%);
 }
 
 .post:hover{
@@ -25,7 +26,7 @@ body{
     box-shadow: -3px -5px 10px rgb(253, 253, 253), 3px 5px 5px rgb(187, 187, 187);
 }
 
-.post img{
+.post img, .post video{
     width: 250px;
     height: 250px;
     border-radius: 5%;
@@ -38,25 +39,29 @@ body{
 
 .post p{
     text-align: center;
+    word-break: break-word;
 }
 
 @media all and (max-width: 768px){
 
     #postsList{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .post{
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: calc(95vw - 8%);
     }
 
     .post:hover{
         transform: scale(1.03);
     }
 
-    .post img{
+    .post img, .post video{
         width: calc(95vw - 14%);
         height: auto;
     }
