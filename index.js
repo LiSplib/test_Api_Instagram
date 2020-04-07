@@ -15,7 +15,18 @@ function handleError(err){
 
 function readData(data){
     let html = "";
+    const mp4 = '.mp4';
     data.data.forEach(element => {
+        if (element.media_url.indexOf(mp4) !== -1){
+            return html +=`
+            <div class="post">
+                <video controls width="250">
+                    <source src="${element.media_url}">
+                </video>
+                <p>${element.caption ? element.caption : ''} </p>
+            </div>
+            `;  
+        }
         return html +=`
         <div class="post">
             <img src="${element.media_url}">
