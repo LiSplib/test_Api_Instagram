@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Facebook</title>
+    </head>
+    <body>
+        
+    <script>
+        window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '596355230967973',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v6.0'
+        });
+            
+        FB.AppEvents.logPageView();   
+            
+        };
+    
+        (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function updateView(){
+            fetch("https://graph.facebook.com/facebook/10221995463856774?fields=id,name&access_token=EAAIeYcWzqKUBAChhZAk7RjfXibWf3dkfI9ZAXGV5LajmiFsZAfAK7dIhyx6e8Qu4PFizU6LSGsW3vn2IZBXESV3lBGjZAJzErueK9PSSFZAOFSDvZAXYUJCLQabCw14o22E7LWMOkknmBSJVdGB6J48AQWNIOZCSfRZBo6ouDY9dUENSyjc2QNZCZC9hoZCghwT501N0NHJpshY3lIgsWzs5ZA44e", {
+                "method": "GET"
+                })
+            .then(res => res.json())
+            .then(data => readData(data))
+            .catch(err => handleError(err));
+        }
+        function readData(data){
+            console.log(data)
+        }
+        updateView();
+    </script>
+        
+    </body>
+</html>

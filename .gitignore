@@ -3,3 +3,4 @@ test.http
 url
 response.json
 index.php
+/vendor/

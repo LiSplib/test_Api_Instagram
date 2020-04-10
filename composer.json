@@ -1,0 +1,13 @@
+{
+    "name": "hybri/api-insta",
+    "description": "facebookLogin",
+    "authors": [
+        {
+            "name": "LiSplib",
+            "email": "jcbarret@outlook.fr"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "^5.7"
+    }
+}
