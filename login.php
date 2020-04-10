@@ -13,4 +13,4 @@ $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email'];
 $loginUrl = $helper->getLoginUrl('http://localhost/ApiInsta/fb-callback.php', $permissions);
 
-echo '<a href="' . htmlspecialchars($loginUrl) . '"> Se Connecter Avec Facebook</a>';
+echo '<a href="' . htmlspecialchars($loginUrl) . '" style="background:#2d88ff; color:white;"> Se Connecter avec Facebook </a>';

@@ -1,5 +1,4 @@
 <?php
-
 use Facebook\Facebook;
 
 require_once 'vendor/autoload.php';
@@ -10,7 +9,7 @@ $fb = new Facebook([
     'default_graph_version' => 'v2.2',
 ]);
 
-$fb->setDefaultAccessToken('EAAIeYcWzqKUBAF9s8kdMoPis5vBYauY7U9VNjSyN9X7XvNnpo4PAlx3F9VRQuA3h3uZBxjgY2zR438GpW3ygfw7a37k20pnELa1sctmtlVbPZASeW01nNXCOd7Cj8IVOzHmo4g4QZAIypuQN93pBXuLRg3waDFm5H5lEk4OOfPRamlhL0KTmemFkutYtWYd6EGHB6oKkVYbRaFdZAr0h');
+$fb->setDefaultAccessToken('EAAIeYcWzqKUBAE2oFcfyJHJQfh8TsIGWpz0JMGAHqXt21h1ssd3NrgS0UelCvwDJxKJZActq4bhPYOsnXilHWcFr84BPCLWKJ8oU35n0GDOIb0nEVhmGR76ng14LWq4E5EB0IyQ0ltlyc6vwQxDQW4gjiS8zJ9uaI8lBpVvJpm98QNNHe');
 
 
 
@@ -28,8 +27,8 @@ try {
   }
   $allEvents = $response->getDecodedBody()['events']['data'];
   ?>
-<div>
-  <h1 style="text-align:center; text-transform: uppercase;">Les évènements</h1>
+<div style="text-align:center; text-transform: uppercase; background: #242526; color: #e4e6eb; margin: 2%; padding: 2%; border-radius: 0.5rem; box-shadow: 1px 2px 10px black;">
+  <h1 style="text-shadow: 1px 2px 10px black;">Les évènements</h1>
 </div>
 <?php
   foreach($allEvents as $events){
@@ -38,22 +37,24 @@ try {
     $eventDescription = (empty($events['description'])) ? '' : $events['description'];
     $eventPicture = (empty($events['cover']['source'])) ? '' : $events['cover']['source'];
     $eventStartTime = (empty($events['start_time'])) ? '' : $events['start_time'];
-    $eventStart = new DateTime($eventStartTime);
-    // $eventStart->format('Y-m-d');
-    // var_dump($eventStart); die();
+    
 
+    $eventStart = new DateTime($eventStartTime);
+    $date = $eventStart->format('d-m-Y');
+    $hour = $eventStart->format('H:i');
     ?>
-    <div style="background: grey; margin: 2%; border-radius: 0.5rem; text-align:center; padding: 2%;">
-      <div> 
+    <div style="background: #242526; margin: 2%; border-radius: 0.5rem; text-align:center; padding: 2%; color: #e4e6eb;">
+      <div style="background: #3a3b3c; margin: 2%; border-radius: 0.5rem; padding: 2%; box-shadow: 1px 2px 10px black;"> 
         <h2><?= $eventName ?></h2>
       </div>
-      <div>
+      <div style="background: #3a3b3c; margin: 2%; border-radius: 0.5rem; padding: 2%; box-shadow: 1px 2px 10px black; font-size: 1.2em;">
+        <h2>
+          <?= $date ?> à partir de <?= $hour ?>
+        </h2>
         <p>
           <?= $eventDescription ?>
         </p>
-        <p>
-          <?= $eventStartTime ?>
-        </p>
+        
         <img style="border-radius: 0.5rem; box-shadow: 1px 2px 10px black; height: 500px; margin-top: 1%;" src="<?= $eventPicture ?>" alt="">
       </div>
     </div>

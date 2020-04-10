@@ -1,9 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
-use Intervention\Image\ImageManager;
 
-$manager = new ImageManager();
 
 $fb = new \Facebook\Facebook([
   'app_id' => '596355230967973',
