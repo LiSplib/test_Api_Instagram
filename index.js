@@ -1,7 +1,7 @@
 const $postList = document.getElementById('postsList');
 
 function updateView(){
-    fetch("https://graph.instagram.com/me/media?fields=caption,media_url&access_token=IGQVJWTkYzdTRaTlhhSW1ZAaVdRSi1VNmNNNnkxLTVjTENleFpraC1JbVFsVE02WmRDTURHSS1BVUJaZA3JOM0p6WVlfOW1jVkg2Ykg2N3Y0M3dlTjF5S1g0c3dCblVnZAV9IX3RPUC1B", {
+    fetch("https://graph.instagram.com/me/media?fields=caption,media_url&access_token=IGQVJVZAUlPdUlGeTYybjRZAMXp1U3VMNmREa2hVQ0x3TGltWUNBYkFrN2lKWk9GSnc3SVBiVFgwZA29HYVlBbDNtTnZA1NHhLRl81T0tnenk4Vkt4WmlRV2QxZA2l5OFI1a19BbzNLTVhR", {
         "method": "GET"
         })
     .then(res => res.json())
